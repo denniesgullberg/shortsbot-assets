@@ -65,7 +65,8 @@ Marcus checks his messages between every rep. Marcus wipes down the bench with a
 4. Put both files in the `inbox/` folder of the shared GitHub repository `denniesgullberg/shortsbot-assets`.
    - If you can push to GitHub, commit them to `inbox/` on the `main` branch.
    - If you cannot, give the files to the person you are working with and ask them to upload both to `inbox/` using "Add file" then "Upload files" on the repository page.
-5. Do not edit anything outside `inbox/`. The bot reviews each episode, moves approved ones to `episodes/` and posts them on the schedule.
+5. Tools that can only reach Google Drive (for example Gemini): save both files in the Google Drive folder `dennisshortz-inbox` (https://drive.google.com/drive/folders/1YtU7JP38uV_ezNn8I8dZE547UsyEFl-7). Use the same file names and the same metadata file as above. The bot reads this folder as well as the GitHub inbox.
+6. Do not edit anything outside `inbox/` or `dennisshortz-inbox`. The bot reviews each episode, moves approved ones to `episodes/` and posts them on the schedule.
 
 ## Quality check before you hand over
 
