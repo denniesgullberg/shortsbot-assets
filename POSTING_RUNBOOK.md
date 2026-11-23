@@ -27,7 +27,7 @@ Tags: shorts, gym, gym humor, gym etiquette, gym memes, fitness, fitness humor, 
 
 ## One posting run
 1. Find the next episode: list channel videos (YOUTUBE_LIST_CHANNEL_VIDEOS, channelId UCAEYmYCv7Tj-6XZsX4QRxvA, maxResults 50) and read descriptions for "episode N". Next = lowest N in 3..22 not yet on the channel.
-2. Search the inbox folder for epN files. If missing, stop and report "episode N not delivered". Never skip ahead to N+1.
+2. Search Google Drive by file name (title contains 'epN_shot' or 'epN.mp4', mimeType video/mp4), in the inbox folder first and then anywhere in Drive, because Gemini sometimes saves to another folder. Ignore files whose name does not start with epN. If missing, stop and report "episode N not delivered". Never skip ahead to N+1.
 3. In COMPOSIO_REMOTE_WORKBENCH: GOOGLEDRIVE_DOWNLOAD_FILE per file, requests.get the s3url, `pip install imageio-ffmpeg`.
 4. If there are several shots, join in order with the ffmpeg concat filter: scale+pad to 1080x1920, 30 fps, AAC 44.1 kHz audio. Check with ffprobe: vertical, audio present, duration <= 58 s. If it fails, stop and report; do not upload.
 5. upload_local_file for the s3key, then YOUTUBE_MULTIPART_UPLOAD_VIDEO with privacy public, title/description/tags above.
